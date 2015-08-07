@@ -1,12 +1,12 @@
 # _address-book_
 
-##### _Simple address book in Silex/Twig, 08/07/15_
+##### Simple address book in Silex/Twig, 08/07/15
 
 #### By _**Ashlin Aronin**_
 
 ## Description
 
-_address-book allows users to input contacts to store them in an address book. After adding contacts, they can delete them individually or clear their entire address book and start over. Contacts are stored in cookies, so they will only be saved as long as the user's cookies. The application is implemented in PHP using the Silex micro-framework and Twig template engine. Anyone who is interested in using this code for any reason is welcome to do so, though I can't see any reason why you would want to._
+address-book allows users to input contacts to store them in an address book. After adding contacts, they can delete them individually or clear their entire address book and start over. Contacts are stored in cookies, so they will only be saved as long as the user's cookies. The application is implemented in PHP using the Silex micro-framework and Twig template engine. Anyone who is interested in using this code for any reason is welcome to do so, though I can't see any reason why you would want to.
 
 ## Setup
 
@@ -15,11 +15,11 @@ _address-book allows users to input contacts to store them in an address book. A
 * Start a PHP server in /web by running "php -S localhost:8000"
 * Visit localhost:8000 and enjoy!
 
-_This is a relatively simple app. I use the Composer dependency manager, so you can install all of the necessary dependencies easily using "composer install." Once you've done that, it's just a matter of getting a PHP server running._
+This is a relatively simple app. I use the Composer dependency manager, so you can install all of the necessary dependencies easily using "composer install." Once you've done that, it's just a matter of getting a PHP server running.
 
 ## Technologies Used
 
-_HTML/CSS/Bootstrap used for display in Twig templates. The app is implemented in PHP using the Model View Controller design pattern in the Silex micro-framework._
+HTML/CSS/Bootstrap used for display in Twig templates. The app is implemented in PHP using the Model View Controller design pattern in the Silex micro-framework.
 
 ### Legal
 
