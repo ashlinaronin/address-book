@@ -43,15 +43,6 @@
         return $app['twig']->render('clear_contacts.html.twig');
     });
 
-    $app->get('/print_contacts', function() use ($app) {
-        $output = "";
-        foreach (Contact::getAll() as $contact) {
-            $output .= "contact name is " . $contact->getName() . "<hr />";
-        }
-
-        return $output;
-    });
-
     /* Delete specific contact. This route also doesn't pass any
        data to Twig because we just confirm that the user has
        deleted a contact, then redirect to the main page. */
