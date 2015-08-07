@@ -1,29 +1,29 @@
-# _{address-book}_
+# _address-book_
 
-##### _{Simple address book in Silex/Twig}, {08/07/15}_
+##### _Simple address book in Silex/Twig, 08/07/15_
 
-#### By _**{Ashlin Aronin}**_
+#### By _**Ashlin Aronin**_
 
 ## Description
 
-_{address-book allows users to input contacts to store them in an address book. After adding contacts, they can delete them individually or clear their entire address book and start over. Contacts are stored in cookies, so they will only be saved as long as the user's cookies. The application is implemented in PHP using the Silex micro-framework and Twig template engine. Anyone who is interested in using this code for any reason is welcome to do so, though I can't see any reason why you would want to.}_
+_address-book allows users to input contacts to store them in an address book. After adding contacts, they can delete them individually or clear their entire address book and start over. Contacts are stored in cookies, so they will only be saved as long as the user's cookies. The application is implemented in PHP using the Silex micro-framework and Twig template engine. Anyone who is interested in using this code for any reason is welcome to do so, though I can't see any reason why you would want to._
 
 ## Setup
 
-* _Clone the repository from GitHub
-* _Run "composer install" in the root address-book folder
-* _Start a PHP server in /web by running "php -S localhost:8000"
-* _Visit localhost:8000 and enjoy!
+* Clone the repository from GitHub
+* Run "composer install" in the root address-book folder
+* Start a PHP server in /web by running "php -S localhost:8000"
+* Visit localhost:8000 and enjoy!
 
-_{This is a relatively simple app. I use the Composer dependency manager, so you can install all of the necessary dependencies easily using "composer install." Once you've done that, it's just a matter of getting a PHP server running.}_
+_This is a relatively simple app. I use the Composer dependency manager, so you can install all of the necessary dependencies easily using "composer install." Once you've done that, it's just a matter of getting a PHP server running._
 
 ## Technologies Used
 
-_{HTML/CSS/Bootstrap used for display in Twig templates. The app is implemented in PHP using the Model View Controller design pattern in the Silex micro-framework. }_
+_HTML/CSS/Bootstrap used for display in Twig templates. The app is implemented in PHP using the Model View Controller design pattern in the Silex micro-framework._
 
 ### Legal
 
-Copyright (c) 2015 **_{Ashlin Aronin}_**
+Copyright (c) 2015 **_Ashlin Aronin_**
 
 This software is licensed under the MIT license.
 
