@@ -18,9 +18,19 @@
     ));
 
     // Root path displays any existing Contacts and supplies entry form
-    $app->get('/', function() user ($app) {
+    $app->get('/', function() use ($app) {
         return $app['twig']->render('address_book.html.twig', array(
             'list_of_contacts' => Contact::getAll()
+        ));
+    });
+
+    $app->post('/create_contact', function() use ($app) {
+        $new_contact = new Contact($_POST['name'], $_POST['phone'], $_POST['address']);
+        $new_contact->save();
+
+        // pass Twig the new Contact object so it can confirm creation for user
+        return $app['twig']->render('create_contact.html.twig', array(
+            'new_contact' => $new_contact
         ));
     });
 
