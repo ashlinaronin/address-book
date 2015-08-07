@@ -41,16 +41,17 @@ class Contact {
     // Cookie methods
     function save()
     {
-        array_push($_SESSION['address_book'], $this)
+        array_push($_SESSION['list_of_contacts'], $this)
     }
 
     static function getAll()
     {
-        return $_SESSION['address_book'];
+        return $_SESSION['list_of_contacts'];
     }
 
     static function deleteAll()
     {
-        $_SESSION['address_book'] = array();
+        $_SESSION['list_of_contacts'] = array();
     }
 }
+?>
