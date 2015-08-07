@@ -38,9 +38,18 @@
     /* Delete all contacts and present confirmation page to user.
        This route doesn't need to pass any data to Twig because
        nothing particular to the user is displayed, just HTML. */
-    $app->get('/delete_contacts', function() use ($app) {
+    $app->get('/clear_contacts', function() use ($app) {
         Contact::deleteAll();
-        return $app['twig']->render('delete_contacts.html.twig');
+        return $app['twig']->render('clear_contacts.html.twig');
+    });
+
+    $app->get('/print_contacts', function() use ($app) {
+        $output = "";
+        foreach (Contact::getAll() as $contact) {
+            $output .= "contact name is " . $contact->getName() . "<hr />";
+        }
+
+        return $output;
     });
 
     /* Delete specific contact. This route also doesn't pass any

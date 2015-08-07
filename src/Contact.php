@@ -56,6 +56,18 @@ class Contact {
     static function delete($index_to_delete)
     {
         unset($_SESSION['list_of_contacts'][$index_to_delete]);
+
+        /* Re-adjust the contacts array so that all numerical indices are filled.
+           All arrays are associate arrays in PHP, so if we don't do this there
+           will be missing indices with no values. e.g. after unset() on index 3:
+                [0] => contact1
+                [1] => contact2
+                [2] => contact3
+                [4] => contact5
+           This way, Twig will be able to pass the correct index_to_delete by simply
+           counting contact indices from the top of the address book.
+        */
+        $_SESSION['list_of_contacts'] = array_values($_SESSION['list_of_contacts']);
     }
 
     static function getAll()
