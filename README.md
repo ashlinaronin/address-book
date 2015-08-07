@@ -10,7 +10,7 @@ address-book allows users to input contacts (name, phone, and address) to store 
 
 ## Setup
 
-* Clone the repository from GitHub. If you don't know how to do that, Epicodus has a [good tutorial](https://www.learnhowtoprogram.com/lessons/git-clone "Git-Clone Tutorial").
+* Clone the repository from GitHub. If you don't know how to do that, Epicodus has a [good tutorial](https://www.learnhowtoprogram.com/lessons/git-clone "Git-Clone Tutorial")
 * Run "composer install" in the root address-book folder
 * Start a PHP server in /web by running "php -S localhost:8000"
 * Visit localhost:8000 and enjoy!
