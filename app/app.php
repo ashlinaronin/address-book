@@ -43,6 +43,14 @@
         return $app['twig']->render('delete_contacts.html.twig');
     });
 
+    /* Delete specific contact. This route also doesn't pass any
+       data to Twig because we just confirm that the user has
+       deleted a contact, then redirect to the main page. */
+    $app->get('/delete_contact', function() use ($app) {
+        Contact::delete($_GET['index_to_delete']);
+        return $app['twig']->render('delete_contact.html.twig');
+    });
+
     return $app;
 
 ?>

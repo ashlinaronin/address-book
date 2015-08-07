@@ -15,6 +15,8 @@
                                 <li><em>Phone</em>: {{ contact.getPhone }}</li>
                                 <li><em>Address</em>: {{ contact.getAddress }}</li>
                             </ul>
+                            {# pass the next page the index of this contact so we can delete it #}
+                            <a href='/delete_contact?index_to_delete={{ loop.index - 1}}'>Delete contact</a>
                             <hr />
                         {% endfor %}
                         <form action='/delete_contacts' method='get'>
