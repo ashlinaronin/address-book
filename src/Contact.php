@@ -4,6 +4,13 @@ class Contact {
     private phone;
     private address;
 
+    function __construct($contact_name, $contact_phone, $contact_address)
+    {
+        $this->name = (string) $contact_name;
+        $this->phone = (int) $contact_phone;
+        $this->address = (string) $contact_address;
+    }
+
     // Getters
     function getName()
     {
