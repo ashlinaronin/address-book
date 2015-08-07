@@ -6,7 +6,7 @@
 
 ## Description
 
-address-book allows users to input contacts to store them in an address book. After adding contacts, they can delete them individually or clear their entire address book and start over. Contacts are stored in cookies, so they will only be saved as long as the user's cookies. The application is implemented in PHP using the Silex micro-framework and Twig template engine. Anyone who is interested in using this code for any reason is welcome to do so, though I can't see any reason why you would want to.
+address-book allows users to input contacts (name, phone, and address) to store them in an address book. After adding contacts, they can delete them individually or clear their entire address book and start over. Contacts are stored in cookies, so they will only be saved as long as the user's cookies. The application is implemented in PHP using the Silex micro-framework and Twig template engine. Anyone who is interested in using this code for any reason is welcome to do so, though I can't see any reason why you would want to.
 
 ## Setup
 
