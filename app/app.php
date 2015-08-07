@@ -25,6 +25,8 @@
     });
 
     $app->post('/create_contact', function() use ($app) {
+        // input validation in constructor
+
         $new_contact = new Contact($_POST['name'], $_POST['phone'], $_POST['address']);
         $new_contact->save();
 

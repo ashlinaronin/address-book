@@ -6,6 +6,8 @@ class Contact {
 
     function __construct($contact_name, $contact_phone, $contact_address)
     {
+        // add input validation here
+
         $this->name = (string) $contact_name;
         $this->phone = (int) $contact_phone;
         $this->address = (string) $contact_address;
