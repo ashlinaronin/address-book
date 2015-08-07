@@ -6,16 +6,12 @@
     </head>
     <body>
         <div class='container'>
-            {% if new_contact %}
                 <h3>Thanks for adding a contact.</h3>
                 <strong>{{ new_contact.getName }}</strong>
                 <ul>
                     <li><em>Phone</em>: {{ new_contact.getPhone }}</li>
                     <li><em>Address</em>: {{ new_contact.getAddress }}</li>
                 </ul>
-            {% else %}
-                <h3>Something went wrong and your contact was not created.</h3>
-            {% endif %}
             <p>You will be redirected to your <a href='/'>address book</a> automatically.</p>
         </div>
     </body>
