@@ -17,6 +17,9 @@
                                 <hr />
                             </ul>
                         {% endfor %}
+                        <form action='/delete_contacts' method='get'>
+                            <button type='submit' class='btn btn-warning'>Clear Address Book</button>
+                        </form>
                     </div>
                 {% endif %}
 
@@ -35,14 +38,12 @@
                                 <label for='address'>Street Address</label>
                                 <input id='address' name='address' type='text' class='form-control'>
                             </div>
-                            <button type='submit' class='btn btn-default'>Submit</button>
+                            <button type='submit' class='btn btn-success'>Submit</button>
                         </form>
                     </div>
             </div>
             <div class='row'>
-                <form action='/delete_contacts' method='get'>
-                    <button type='submit' class='btn btn-warning'>Clear Address Book</button>
-                </form>
+
             </div>
         </div>
     </body>

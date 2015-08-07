@@ -50,6 +50,13 @@
         return $output;
     });
 
+    /* Delete contacts route doesn't need to pass any data to Twig because
+       nothing particular to the user's address book is displayed. */
+    $app->get('/delete_contacts', function() use ($app) {
+        Contact::deleteAll();
+        return $app['twig']->render('delete_contacts.html.twig');
+    });
+
     return $app;
 
 ?>
