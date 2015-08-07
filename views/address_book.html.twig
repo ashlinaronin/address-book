@@ -10,12 +10,12 @@
                     <div class='col-md-6'>
                         <h1>Contacts</h1>
                         {% for contact in list_of_contacts %}
+                            <strong>{{ contact.getName }}</strong>
                             <ul>
-                                <li><strong>{{ contact.getName }}</strong></li>
                                 <li><em>Phone</em>: {{ contact.getPhone }}</li>
                                 <li><em>Address</em>: {{ contact.getAddress }}</li>
-                                <hr />
                             </ul>
+                            <hr />
                         {% endfor %}
                         <form action='/delete_contacts' method='get'>
                             <button type='submit' class='btn btn-warning'>Clear Address Book</button>

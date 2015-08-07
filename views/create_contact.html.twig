@@ -8,8 +8,8 @@
         <div class='container'>
             {% if new_contact %}
                 <h3>Thanks for adding a contact.</h3>
+                <strong>{{ new_contact.getName }}</strong>
                 <ul>
-                    <li><strong>{{ new_contact.getName }}</strong></li>
                     <li><em>Phone</em>: {{ new_contact.getPhone }}</li>
                     <li><em>Address</em>: {{ new_contact.getAddress }}</li>
                 </ul>
