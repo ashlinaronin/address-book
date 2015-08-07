@@ -25,7 +25,8 @@
     });
 
     $app->post('/create_contact', function() use ($app) {
-        // input validation in constructor
+
+        // add input validation in constructor
 
         $new_contact = new Contact($_POST['name'], $_POST['phone'], $_POST['address']);
         $new_contact->save();
@@ -34,6 +35,19 @@
         return $app['twig']->render('create_contact.html.twig', array(
             'new_contact' => $new_contact
         ));
+    });
+
+    $app->get('/tests', function() use ($app) {
+        $output = '';
+
+        foreach (Contact::getAll() as $current_contact) {
+            $output .= "Contact name: " . $current_contact->getName();
+            $output .= ", phone: " . $current_contact->getPhone();
+            $output .= ", address: " . $current_contact->getAddress();
+            $output .= "<hr>";
+        }
+
+        return $output;
     });
 
     return $app;

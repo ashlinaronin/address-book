@@ -5,35 +5,43 @@
     </head>
     <body>
         <div class='container'>
-            {% if address_book is not empty %}
-                <div class='row'>
-                    {% for contact in address_book %}
-                        <div class='col-md-6'>
+            <div class='row'>
+                {% if list_of_contacts is not empty %}
+                    <div class='col-md-6'>
+                        <h3>Your Address Book</h3>
+                        {% for contact in list_of_contacts %}
                             <ul>
                                 <li><strong>{{ contact.getName }}</strong></li>
-                                <li>{{ contact.getPhone }}</li>
-                                <li>{{ contact.getAddress }}</li>
+                                <li><em>Phone</em>: {{ contact.getPhone }}</li>
+                                <li><em>Address</em>: {{ contact.getAddress }}</li>
+                                <hr />
                             </ul>
-                        </div>
-                    {% endfor %}
-                </div>
-            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
 
+                    <div class='col-md-6'>
+                        <h3>Create a contact</h3>
+                        <form action='/create_contact' method='post'>
+                            <div class='form-group'>
+                                <label for='name'>Name</label>
+                                <input id='name' name='name' type='text' class='form-control'>
+                            </div>
+                            <div class='form-group'>
+                                <label for='phone'>Phone Number</label>
+                                <input id='phone' name='phone' type='number' class='form-control'>
+                            </div>
+                            <div class='form-group'>
+                                <label for='address'>Street Address</label>
+                                <input id='address' name='address' type='text' class='form-control'>
+                            </div>
+                            <button type='submit' class='btn btn-default'>Submit</button>
+                        </form>
+                    </div>
+            </div>
             <div class='row'>
-                <form action='/create_contact' method='post'>
-                    <div class='form-group'>
-                        <label for='name'>Name</label>
-                        <input id='name' name='name' type='text' class='form-control'>
-                    </div>
-                    <div class='form-group'>
-                        <label for='phone'>Phone Number</label>
-                        <input id='phone' name='phone' type='number' class='form-control'>
-                    </div>
-                    <div class='form-group'>
-                        <label for='address'>Street Address</label>
-                        <input id='address' name='address' type='text' class='form-control'>
-                    </div>
-                    <button type='submit' class='btn btn-default'>Submit</button>
+                <form action='/delete_contacts' method='get'>
+                    <button type='submit' class='btn btn-warning'>Clear Address Book</button>
                 </form>
             </div>
         </div>

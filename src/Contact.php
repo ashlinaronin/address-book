@@ -1,8 +1,8 @@
 <?php
 class Contact {
-    private name;
-    private phone;
-    private address;
+    private $name;
+    private $phone;
+    private $address;
 
     function __construct($contact_name, $contact_phone, $contact_address)
     {
@@ -50,7 +50,7 @@ class Contact {
     // Cookie methods
     function save()
     {
-        array_push($_SESSION['list_of_contacts'], $this)
+        array_push($_SESSION['list_of_contacts'], $this);
     }
 
     static function getAll()
